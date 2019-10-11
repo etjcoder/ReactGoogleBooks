@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
 import NoMatch from "./pages/NoMatch";
-// import SavedBooks from "./pages/SavedBooks";
+import SavedBooks from "./pages/SavedBooks";
 import Nav from "./components/Nav/";
 
 // class App extends Component {
@@ -27,7 +27,7 @@ function App () {
           <Switch>
             <Route exact path="/" component={Books} />
             <Route exact path="/search" component={Books} />
-            {/* <Route exact path="/saved" component={SavedBooks} /> */}
+            <Route exact path="/saved" component={SavedBooks} />
             <Route component={NoMatch} />
           </Switch>
         </div>
