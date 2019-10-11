@@ -3,13 +3,13 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid/";
 import { List, ListItem } from "../components/List";
-import { Input, FormBtn } from "../components/Form";
+// import { Input, FormBtn } from "../components/Form";
 
 
 class SavedBooks extends Component {
 
     state = {
-        books: [],
+        savedBooks: [],
     }
 
     componentDidMount() {
@@ -18,8 +18,22 @@ class SavedBooks extends Component {
 
     gatherBooks = () => {
         API.getSavedBooks()
-            .then(res => console.log(res)
-        )
+            .then(res => 
+                
+                this.setState({
+                    savedBooks: res.data
+                })
+                )
+        }
+
+    deleteSavedBook = (id) =>
+    {
+        console.log("You deleted: " + id)
+        API.deleteBook(id)
+            .then(res => console.log("You've deleted this Book from your DB")
+            // .catch(err => console.log(err))
+            
+            )
     }
 
     
@@ -34,15 +48,20 @@ class SavedBooks extends Component {
                     </Col>
                     <Col size="xs-12">
                         <List>
-                            <ListItem>
 
-                                <h3>
+                            {this.state.savedBooks.map(saved => (
+                                <ListItem key={saved._id}>
+                                    <h3>
                                     <strong>
-                                        
-                                    </strong>
-                                </h3>
+                                        {saved.title} by {saved.author}
+                                    </strong></h3>
+                                        <p>{saved.description} </p>
 
-                            </ListItem>
+                                        <a href={saved.link}>View book</a>
+                                    <button onClick={() => this.deleteSavedBook(saved._id)}>Delete book!</button>
+                                </ListItem>
+                            ))}
+
                         </List>
 
 
