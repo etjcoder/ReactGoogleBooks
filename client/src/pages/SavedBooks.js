@@ -4,6 +4,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid/";
 import { List, ListItem } from "../components/List";
 // import { Input, FormBtn } from "../components/Form";
+import DeleteBtn from "../components/DeleteBtn";
 
 
 class SavedBooks extends Component {
@@ -61,7 +62,7 @@ class SavedBooks extends Component {
                                         <p>{saved.description} </p>
 
                                         <a href={saved.link}>View book</a>
-                                    <button onClick={() => this.deleteSavedBook(saved._id)}>Delete book!</button>
+                                    <DeleteBtn onClick={() => this.deleteSavedBook(saved._id)}/>
                                 </ListItem>
                             ))}
 
