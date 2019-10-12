@@ -17,7 +17,7 @@ class Books extends Component {
 
     componentDidMount() {
         this.randomizeBooks()
-        console.log("New version showing 1.1")
+        console.log("New version showing")
     }
 
     randomizeBooks = () => {
