@@ -34,10 +34,9 @@ class SavedBooks extends Component {
     {
         console.log("You deleted: " + id)
         API.deleteBook(id)
-            .then(res => console.log("You've deleted this Book from your DB")
-            // .catch(err => console.log(err))
+        .then(res => this.gatherBooks())
+        .catch(err => console.log(err));
             
-            )
     }
 
     

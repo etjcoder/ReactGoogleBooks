@@ -22,7 +22,7 @@ class Books extends Component {
         API.randomBooks()
             .then(res => console.log(res))
     }
-    
+
 
     searchBooks = query => {
         API.searchBooks(query)
@@ -96,7 +96,7 @@ class Books extends Component {
                                 name="search"
                                 placeholder="Title (required)"
                                 />
-                            <FormBtn onClick={this.handleFormSubmit}/>
+                            <FormBtn onClick={this.handleFormSubmit}/>Search for books
                         </form>
                         <button onClick={this.testState}>ConsoleLog</button>
                     </Col>
