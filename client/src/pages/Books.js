@@ -99,7 +99,7 @@ class Books extends Component {
                                 />
                             <SearchBtn onClick={this.handleFormSubmit}/>
                         </form>
-                        <button onClick={this.testState}>ConsoleLog</button>
+                        <SearchBtn onClick={this.testState}/>
                     </Col>
                     <Col size="md-6">
                         <Jumbotron>

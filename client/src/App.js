@@ -20,6 +20,7 @@ import Nav from "./components/Nav/";
   // render() {
 
 function App () {
+    console.log("New App loaded");
     return (
       <Router>
         <div>

@@ -17,9 +17,9 @@ class SavedBooks extends Component {
         this.gatherBooks()
     }
 
-    componentDidUpdate() {
-        this.gatherBooks()
-    }
+    // componentDidUpdate() {
+    //     this.gatherBooks()
+    // }
 
     gatherBooks = () => {
         API.getSavedBooks()
