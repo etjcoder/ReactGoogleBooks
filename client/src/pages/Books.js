@@ -5,6 +5,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid/";
 import { List, ListItem } from "../components/List/";
 import { Input, FormBtn } from "../components/Form/";
+import SearchBtn from "../components/SearchBtn";
 // import BookSearchForm from "../components/BookSearchForm/";
 
 class Books extends Component {
@@ -96,7 +97,7 @@ class Books extends Component {
                                 name="search"
                                 placeholder="Title (required)"
                                 />
-                            <FormBtn onClick={this.handleFormSubmit}/>Search for books
+                            <SearchBtn onClick={this.handleFormSubmit}/>
                         </form>
                         <button onClick={this.testState}>ConsoleLog</button>
                     </Col>
