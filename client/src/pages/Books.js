@@ -22,6 +22,7 @@ class Books extends Component {
         API.randomBooks()
             .then(res => console.log(res))
     }
+    
 
     searchBooks = query => {
         API.searchBooks(query)
