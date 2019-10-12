@@ -77,7 +77,7 @@ class Books extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log("Form has been submitted!");
+        console.log("Book has been saved!");
         this.searchBooks(this.state.search)
     }
 
@@ -100,7 +100,6 @@ class Books extends Component {
                                 />
                             <SearchBtn onClick={this.handleFormSubmit}/>
                         </form>
-                        <SearchBtn onClick={this.testState}/>
                     </Col>
                     <Col size="md-6">
                         <Jumbotron>
