@@ -5,6 +5,7 @@ import Books from "./pages/Books";
 import NoMatch from "./pages/NoMatch";
 import SavedBooks from "./pages/SavedBooks";
 import Nav from "./components/Nav/";
+import ProtegeDash from "./pages/ProtegeDash";
 
 // class App extends Component {
   // state = {
@@ -29,6 +30,7 @@ function App () {
             <Route exact path="/" component={Books} />
             <Route exact path="/search" component={Books} />
             <Route exact path="/saved" component={SavedBooks} />
+            <Route exact path="/protege" component={ProtegeDash} />
             <Route component={NoMatch} />
           </Switch>
         </div>

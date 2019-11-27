@@ -13,7 +13,7 @@ module.exports = {
         db.Book 
             .create(req.body)
             .then(dbBook => res.json(dbBook))
-            .catch(err => res.status(422).json(err));
+            .catch( console.log(req.body + "not accepted"));
     },
     remove: function(req, res) {
         db.Book 

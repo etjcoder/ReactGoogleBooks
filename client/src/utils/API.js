@@ -5,7 +5,12 @@ var APIKEY = '&key=AIzaSyDNS2op_Ce00hAvNB-o2wam28IBeq8dCZg'
 
 
 export default {
-
+    getDials: function() {
+        return axios.get("/api/dials/session")
+    },
+    logCall: function(data) {
+        return axios.post("/api/dials/session", data)
+    },
     randomBooks: function() {
         return axios.get(BASEURL + "Apple" + APIKEY);
     },

@@ -1,14 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import "./style.css";
+import API from "../../utils/API";
 
-function Nav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        React Reading List
+class Nav extends Component {
+
+  state = {
+    image: ""
+  }
+
+  componentDidMount = () => {
+   
+  }
+
+ 
+
+  render() {
+    return (
+      <nav className="navbar navbar-expand-lg">
+        <a className="navbar-brand" href="/">
+          Indicators App
       </a>
-      <a href="/saved" className="navbar-text"> View Saved Books </a>
-    </nav>
-  );
+
+        <a href="/protege" className="navbar-text ml-auto"> Protege  </a> 
+        ||
+        <a href="/mentor" className="navbar-text">  Mentor </a>
+        ||
+        <a href="/manager" className="navbar-text">  Manager </a>
+      </nav>
+    );
+  }
 }
 
 export default Nav;
